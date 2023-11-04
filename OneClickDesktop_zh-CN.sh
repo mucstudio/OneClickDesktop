@@ -304,7 +304,7 @@ function install_guacamole_centos
 	rm -f guacamole-server-${GUACAMOLE_VERSION}.tar.gz
 	cd $CurrentDir/guacamole-server-$GUACAMOLE_VERSION
 	echo "开始安装Guacamole服务器..."
-	./configure --with-init-dir=/etc/init.d
+	./configure --with-init-dir=/etc/init.d --enable-allow-freerdp-snapshots
 	if [ -f $CurrentDir/guacamole-server-$GUACAMOLE_VERSION/config.status ] ; then
 		say @B"编译条件已满足！" green
 		say @B"开始编译源码..." green
