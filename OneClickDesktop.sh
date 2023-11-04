@@ -304,7 +304,7 @@ function install_guacamole_centos
 	rm -f guacamole-server-${GUACAMOLE_VERSION}.tar.gz
 	cd $CurrentDir/guacamole-server-$GUACAMOLE_VERSION
 	echo "Start building Guacamole Server from source..."
-	./configure --with-init-dir=/etc/init.d
+	./configure --with-init-dir=/etc/init.d --enable-allow-freerdp-snapshots
 	if [ -f $CurrentDir/guacamole-server-$GUACAMOLE_VERSION/config.status ] ; then
 		say @B"Dependencies met!" green
 		say @B"Compiling now..." green
